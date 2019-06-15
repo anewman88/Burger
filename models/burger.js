@@ -27,7 +27,16 @@ var burger = {
         {devoured: true}, 
         condition, 
         cb);
+  },
+
+  /*  Delete a burger entry */
+  delete: function(id, cb) {
+    var condition = "id=" + id;
+    orm.delete("burgers", 
+        condition, 
+        cb);
   }
+
 };
 
 module.exports = burger;

@@ -23,52 +23,63 @@
 
 <!-- Burger Order list and Devoured Burger List -->
 <div class="container">
- <div class="row mt-4">
-    <div class="col-md-6 mt-4">
-      <div class="card border border-primary">
-        <div class="card-header bg-primary text-dark">
-         Ordered Burgers
-        </div>
+ 	<div class="row mt-4">
+		
         <!--Div to hold burgers that have not been devoured yet-->
-        <div class="card-body">
-			<div class="row">
-			{{#each burger_data}}
-			  	{{#unless this.devoured}}
-				<div class="col-md-9 text-left">
-					{{this.id}}. {{this.burger_name}}
-				  		<!-- {{this.Date}} 
-						  <pre>{{this.id}}. {{this.burger_name}}  </pre>-->
+    	<div class="col-md-6 mt-4">
+      		<div class="card border border-primary">
+        		<div class="card-header bg-primary text-dark">
+         			Ordered Burgers
+        		</div>
+        		<div class="card-body">
+					<div class="row">
+						{{#each burger_data}}
+			  				{{#unless this.devoured}}
+								<div class="col-md-9 text-left">
+									{{this.id}}. {{this.burger_name}}
+								</div>
+								<!-- Devour button -->
+								<div class="col-md-2">
+									<form class="devour-form">
+										<input input type="hidden" class="burger_id" type="text" value={{this.id}}>
+										<button type="submit" id="devour_btn" class="btn-sm btn-primary">Devour It!</button>
+									</form>
+								</div>
+							{{/unless}}
+						{{/each}}
+        			</div>
 				</div>
-				<div class="col-md-2">
-					<form class="devour-form">
-						<input input type="hidden" class="burger_id" type="text" value={{this.id}}>
-						<button type="submit" id="devour_btn" class="btn-sm btn-primary">Devour It!</button>
-					</form>
+      		</div>
+    	</div>
+
+		<!--div for after a burger has been devoured -->
+		<div class="col-md-6 mt-4">
+			<div class="card border border-primary">
+				<div class="card-header bg-primary text-dark" id="devoured-card-header">
+					Devoured burgers
 				</div>
-				{{/unless}}
-			{{/each}}
-        </div>
+				<div class="card-body">
+					<div class="row">
+						{{#each burger_data}}
+							{{#if this.devoured}}
+								<!-- Burger -->
+								<div class="col-md-9 text-left">
+									<input class="form-control" type="text" placeholder="{{this.id}} . {{this.burger_name}}" readonly>
+								</div>
+								<!-- Delete button -->
+								<div class="col-md-2">
+									<form class="delete-form">
+										<input input type="hidden" class="burger_id" type="text" value={{this.id}}>
+										<button type="submit" id="delete_btn" class="btn-sm btn-primary">Delete It!</button>
+									</form>
+								</div>
+							{{/if}}
+						{{/each}}
+					</div>
+				</div>
+			</div>
 		</div>
-      </div>
-    </div>
-
-    <div class="col-md-6 mt-4">
-      <div class="card devoured-card border-primary">
-        <div class="card-header bg-primary text-dark" id="devoured-card-header">
-         Devoured burgers
-        </div>
-        <!--When a burger has been devoured, put burger here-->
-        <div class="card-body">
-			{{#each burger_data}}
-			  	{{#if this.devoured}}
-			  		<input class="form-control" type="text" placeholder="{{this.id}} . {{this.burger_name}}" readonly>
-				{{/if}}
-			  {{/each}}
-
-        </div>
-      </div>
-    </div>
-  </div>
+	</div>
 </div>
 
 

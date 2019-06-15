@@ -86,7 +86,26 @@ var orm = {
       }
       cb(result);
     });
+  },
+
+  // Delete an existing entry in the database
+  // table - name of the table
+  // condition - WHERE condition
+  // cd - callback function
+  delete: function(table, condition, cb) {
+    var queryString = "DELETE FROM " + table;
+    queryString += " WHERE ";
+    queryString += condition;
+
+    console.log(queryString);
+    DBconnection.query(queryString, function(err, result) {
+      if (err) {
+        throw err;
+      }
+      cb(result);
+    });
   }
+
 };
 
 module.exports = orm;
