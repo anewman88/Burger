@@ -24,14 +24,14 @@ The purpose of this assignment is to create a burger logging app with MySQL, Nod
 
 * As a bonus, each burger in the Devoured Burger List has a `Delete it!` button. When the user clicks it, the burger will remove from the list.
 
-My working app can be found on Heroku [here](https://shrouded-beyond-64964.herokuapp.com/)
+My working app can be found on Heroku [here](https://dry-depths-46314.herokuapp.com/)
 
 ### Node Packages Used
 The following packages are needed (npm install 'pkg name') to run the app
 
    * [Express](https://www.npmjs.com/package/express)
 
-   * [Express-handlebars] (https://www.npmjs.com/package/express-handlebars)
+   * [Express-handlebars](https://www.npmjs.com/package/express-handlebars)
 
    * [MySQL](https://www.npmjs.com/package/mysql)
 
@@ -96,7 +96,7 @@ MySQL_PW="MyPasswordGoesHere"
 
 ### Running the app on your computer from Heroku
 
-* The working app can be found on Heroku [here](https://shrouded-beyond-64964.herokuapp.com/)
+* The working app can be found on Heroku [here](https://dry-depths-46314.herokuapp.com/)
 
 ## Instructions for Using the App
 
