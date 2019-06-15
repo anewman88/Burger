@@ -1,8 +1,6 @@
 body {
     width: 99%;
     height: 900px;
-    /* background-color: #fc6; */
-
     background-image: url("../img/diner_pic2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -12,14 +10,6 @@ body {
     background-color: rgb(138, 130, 128);
     text-align: center;
   }
-
-  /* #top-bar {
-    margin-top: 28px;
-  } */
-  
-  /* #burger_pic {
-    height: 100px;
-  } */
 
   .spacing-reset {
     padding: 0;
@@ -54,28 +44,12 @@ body {
   
   #enter_order {
     width: 400px;
-/*    height: 80px; */
     padding-top: 10px;
     padding-bottom: 10px;
     margin: auto;
     font-size: 20px;
   }
   
-  /* .task {
-    border-color: black;
-    border-style: solid;
-    border-width: 3px;
-  } */
-  
-  /* .button-size {
-    padding-bottom: 20px;
-  } */
-  
-  /* #text-enter-button {
-    margin-top: 10px;
-    margin-bottom: 18px;
-  } */
-
   #devour_btn,
   #delete_btn  {
     white-space: nowrap;

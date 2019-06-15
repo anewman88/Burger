@@ -1,6 +1,6 @@
 var orm = require("../config/orm.js");
 
-/* define a burger object that contains a series of commands       */
+/* Definition of a burger object that contains a series of commands       */
 /* [via function calls] to perform on the table in the database.   */
 /* These correspond 1-to-1 with the ORM definitions in orm.js      */ 
 var burger = {
